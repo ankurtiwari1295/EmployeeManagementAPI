@@ -18,10 +18,15 @@ app = FastAPI()
 # -------------------
 # Routers
 # -------------------
-app.include_router(employee_router)
-app.include_router(auth_router)
-app.include_router(file_router)
-app.include_router(notification_router)
+# app.include_router(employee_router)
+# app.include_router(auth_router)
+# app.include_router(file_router)
+# app.include_router(notification_router)
+
+
+@app.get("/")
+async def root():
+    return {"message": "Azure Working"}
 
 
 # -------------------
