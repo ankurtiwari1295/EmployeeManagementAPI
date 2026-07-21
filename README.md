@@ -1,22 +1,26 @@
 # Employee Management API
 
 ## Features
-
-- FastAPI
-- PostgreSQL
-- SQLAlchemy
-- Alembic
+- Employee CRUD APIs
 - JWT Authentication
 - Refresh Tokens
 - RBAC
 - File Upload
-- Background Tasks
 - Email Notifications
-- Azure Deployment
+- PostgreSQL
+- Alembic Migrations
+- Azure Ready
+
+## Tech Stack
+- Python 3.12
+- FastAPI
+- PostgreSQL
+- SQLAlchemy
+- Azure
+- Docker
 
 ## Run Locally
 
 ```bash
 pip install -r requirements.txt
-
 uvicorn app.main:app --reload
