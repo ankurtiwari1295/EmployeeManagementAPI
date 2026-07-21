@@ -1,0 +1,27 @@
+services:
+  api:
+    build: .
+
+    container_name: employee-api
+
+    ports:
+      - "8000:8000"
+
+    env_file:
+      - .env
+
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:17
+
+    container_name: employee-db
+
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: employee_db
+
+    ports:
+      - "5432:5432"
